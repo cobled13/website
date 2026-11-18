@@ -1,0 +1,168 @@
+/* ==========================================================================
+   Eastgate Systems / Mark Bernstein Left-Aligned 550px Grid
+   ========================================================================== */
+
+   :root {
+    --bg-color: #000000;
+    --text-color: #cccccc;
+    --heading-color: #ffffff;
+    --link-color: #99ccff;
+    --vlink-color: #669966;
+    --hover-color: #ffffff;
+    --footer-meta: #777777;
+    --rule-color: #222222;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    /* Left-anchored with modest top/left browser breathing room */
+    padding: 2.5rem 0 5rem 2rem;
+    font-family: "Space Mono", monospace;
+    font-size: 10.5pt;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* Master wrapper locked to the 550px banner width */
+  .garden-wrap {
+    width: 1050px;
+  }
+  
+  /* --- 550px Full-Width Header --- */
+  .site-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .header-banner {
+    filter: invert(1);
+    display: block;
+    width: 550px;
+    height: auto;
+    border: 0;
+    background-color: #1a1a1a;
+  }
+
+/* Invert header banner image on hover */
+a.header-link:hover .header-banner {
+    filter: invert(0);
+  }
+
+  a.header-link,
+  a.header-link:hover {
+    display: block;
+    text-decoration: none;
+    background: none;
+  }
+
+  /* --- The 200px / 350px Asymmetric Split --- */
+  .layout-grid {
+    display: grid;
+    grid-template-columns: 200px 350px 300px;
+    column-gap: 2.5rem;
+    align-items: start;
+  }
+  
+  .spacer-col {
+    width: 200px;
+  }
+  
+  .content-col {
+    width: 350px;
+  }
+  .photo-col {
+    width: 300px;
+    margin-top: 0.5rem; /* Aligns visually with the h1 heading line */
+  }
+  /* --- Typography (Scaled for the 350px Column) --- */
+  h1 {
+    font-family: "Space Mono", monospace;
+    font-size: 36pt;
+    font-weight: 700;
+    color: var(--heading-color);
+    line-height: 1.15;
+    margin: 0 0 0.25em 0;
+    letter-spacing: -0.02em;
+  }
+  
+  .subheading {
+    font-size: 10.5pt;
+    line-height: 14pt;
+    color: #888888;
+    margin-bottom: 1.5rem;
+  }
+  
+  p.garden-body {
+    font-weight: bold;
+    font-size: 13pt;
+    line-height: 19pt;
+    color: var(--text-color);
+    margin: 0 0 1.5rem 0;
+    text-align: left;
+  }
+  
+  /* --- Hyperlinks --- */
+  a {
+    color: var(--link-color);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.12s ease;
+  }
+  
+  a:visited {
+    color: var(--vlink-color);
+  }
+  
+  a:hover {
+    color: var(--hover-color);
+  }
+  
+  /* --- Footer & Colophon --- */
+  footer.colophon {
+    margin-top: 3rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--rule-color);
+  }
+  
+  p.footer {
+    font-size: 9.5pt;
+    line-height: 13pt;
+    color: var(--footer-meta);
+    margin: 0 0 0.4rem 0;
+  }
+  
+  p.footer a {
+    color: #999999;
+  }
+  
+  p.footer a:hover {
+    color: var(--hover-color);
+  }
+  
+  p.footer-meta {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 8pt;
+    color: #555555;
+    margin: 0.4rem 0 0 0;
+  }
+
+  .video-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin: 1.5rem 0 2rem 0;
+  }
+  
+  .video-entry iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 1px solid #222222;
+    background-color: #111111;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
